@@ -13,11 +13,12 @@
 				version : 'v2.8'
 			});
 			FB.AppEvents.logPageView();
-			FB.login();
-			FB.getLoginStatus(function(response) {
-			    //statusChangeCallback(response);
-			    console.log(response);
-			});
+			function checkLoginState() {
+				  FB.getLoginStatus(function(response) {
+				    //statusChangeCallback(response);
+				    console.log(response);
+				  });
+				}
 		};
 
 		(function(d, s, id) {
@@ -33,6 +34,8 @@
 		
 		
 	</script>
+	<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button>
 	<div
   class="fb-like"
   data-share="true"
