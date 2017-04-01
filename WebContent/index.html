@@ -32,7 +32,9 @@
 		    } else {
 		     console.log('User cancelled login or did not fully authorize.');
 		    } */
-		}, {scope: 'email,user_likes,read_pages_mailbox,user_photos'});
+		}, {
+			scope: 'email,user_likes,read_pages_mailbox,user_photos', 
+		    return_scopes: true});
   }
 
   window.fbAsyncInit = function() {
