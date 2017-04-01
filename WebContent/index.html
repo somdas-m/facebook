@@ -13,6 +13,7 @@
 				version : 'v2.8'
 			});
 			FB.AppEvents.logPageView();
+			FB.login();
 			FB.getLoginStatus(function(response) {
 			    //statusChangeCallback(response);
 			    console.log(response);
