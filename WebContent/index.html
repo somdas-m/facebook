@@ -64,7 +64,7 @@
   function testAPI() {
     FB.api('/me', function(response) {
       console.log("My friends : ");
-      console.log(response.friends);
+      console.log(response.name);
       console.log(JSON.stringify(response));
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
