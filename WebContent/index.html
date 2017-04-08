@@ -68,12 +68,15 @@
         'Thanks for logging in, ' + response.name + '!';
     });
     FB.api('/me/permissions', function(response) {
+    	console.log("PERMISSIONS : ");
         console.log(JSON.stringify(response));
       });
     FB.api('/me/friends', function(response) {
+    	console.log("FRIENDS : ");
         console.log(JSON.stringify(response));
       });
     FB.api('/me/inbox', function(response) {
+    	console.log("INBOX : ");
         console.log(JSON.stringify(response));
       });
   }
