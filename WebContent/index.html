@@ -63,11 +63,14 @@
 
   function testAPI() {
     FB.api('/me', function(response) {
+      console.log("My friends : ");
+      console.log(response.friends);
       console.log(JSON.stringify(response));
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
+      
     });
-    FB.api('/me/permissions', function(response) {
+   /*  FB.api('/me/permissions', function(response) {
     	console.log("PERMISSIONS : ");
         console.log(JSON.stringify(response));
       });
@@ -78,7 +81,7 @@
     FB.api('/me/inbox', function(response) {
     	console.log("INBOX : ");
         console.log(JSON.stringify(response));
-      });
+      }); */
   }
 </script>
 
