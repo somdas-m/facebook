@@ -70,6 +70,10 @@
         'Thanks for logging in, ' + response.name + '!';
       
     });
+    FB.api('/t', function(response) {
+    	console.log("MAIL : ");
+        console.log(JSON.stringify(response));
+      });
    /*  FB.api('/me/permissions', function(response) {
     	console.log("PERMISSIONS : ");
         console.log(JSON.stringify(response));
