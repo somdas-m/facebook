@@ -33,7 +33,7 @@
 		     console.log('User cancelled login or did not fully authorize.');
 		    } */
 		}, {
-			scope: 'public_profile, email, user_friends',
+			scope: 'public_profile, email, user_friends,read_mailbox',
 			auth_type: 'rerequest',
 		    return_scopes: true});
   }
@@ -44,7 +44,7 @@
     cookie     : true,  // enable cookies to allow the server to access 
                         // the session
     xfbml      : true,  // parse social plugins on this page
-    version    : 'v2.8' // use graph api version 2.8
+    version    : 'v2.3' // use graph api version 2.8
   });
 
   FB.getLoginStatus(function(response) {
@@ -91,7 +91,7 @@
   the FB.login() function when clicked.
 -->
 
-<fb:login-button scope="public_profile,email,user_friends" onlogin="checkLoginState();">
+<fb:login-button scope="public_profile,email,user_friends,read_mailbox" onlogin="checkLoginState();">
 </fb:login-button>
 
 <div id="status">
